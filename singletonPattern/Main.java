@@ -8,9 +8,12 @@ public class Main {
 		
 		KitchenGasStove stove = KitchenGasStove.getInstance();
 		System.out.println(stove.getPower());
+		stove = KitchenGasStove.getInstance();
+		System.out.println(stove.getPower());
 		
 		ConcurrentGasStove multiStove = ConcurrentGasStove.getInstance();
 		System.out.println(multiStove.getPower());
+		
 		
 		
 	}
