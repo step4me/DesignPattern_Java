@@ -1,9 +1,10 @@
 package adapterPattern;
 
 public class Manager {
+	private Customer customer;
 
 	public String getOrder(){
-		Customer customer = new Customer("One Lemonade");
+		customer = new Customer("One Lemonade");
 		return customer.getOrder();
 	}
 }
