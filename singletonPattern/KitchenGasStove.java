@@ -10,9 +10,9 @@ public class KitchenGasStove {
 	private KitchenGasStove(){ 
 		outputPower = 6;
 	}
-	
-	public static KitchenGasStove getInstance(){
-		if (instance == null){
+	//다중 쓰레드 환경에서 인스턴스가 2개 이상 생성되는 경우 발생. 이를 막기 위해 메서드 동기화
+	public synchronized static KitchenGasStove getInstance(){
+		if (instance == null){ //KitchenGasStove 인스턴스가 생성되었는지 검사
 			instance = new KitchenGasStove();
 			System.out.println("새로 생성");
 		} else {
